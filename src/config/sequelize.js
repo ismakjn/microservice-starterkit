@@ -1,15 +1,17 @@
 import {Sequelize} from "sequelize";
-import dotenv from "dotenv";
-import envConfig from "../config/env.js";
+import sqliteConfig from "./sqlite-config.js";
+import env from "./env.js";
 
-dotenv.config();
+const dialect = env.database_dialect;
+let dbConfig = {}
 
+if (dialect === 'sqlite') {
+    dbConfig = sqliteConfig;
+}
 
-export const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage:  envConfig.database_file || './database.sqlite',
-    logging: false,
-});
+const options = dbConfig[env.env];
+
+export const sequelize = new Sequelize(options);
 
 sequelize
     .authenticate()
