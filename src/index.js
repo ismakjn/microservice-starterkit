@@ -1,9 +1,10 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import {routes} from "./routes/routes.js";
-import envConfig from "./config/env.js";
-import {sequelize} from './config/sequelize.js'
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const routes = require('./routes/routes');
+const envConfig = require('./config/env');
+const sequelize = require('./config/sequelize');
+
 
 dotenv.config();
 

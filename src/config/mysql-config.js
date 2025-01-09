@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 
 const config = {
     development: {
@@ -38,3 +38,5 @@ const config = {
         }
     }
 }
+
+module.exports = config;

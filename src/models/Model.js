@@ -1,14 +1,14 @@
-import {DataTypes} from 'sequelize';
-import {sequelize} from "../config/sequelize.js";
+const sequelize = require('sequelize')
+const sequelizeInstance = require('../config/sequelize')
 
-sequelize.define('Model', {
+sequelizeInstance.define('Model', {
     id: {
-        type: DataTypes.INTEGER,
+        type: sequelize.DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },
     modelId: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        type: sequelize.DataTypes.UUID,
+        defaultValue: sequelize.DataTypes.UUIDV4,
     },
 })
