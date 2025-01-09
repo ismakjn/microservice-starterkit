@@ -1,6 +1,6 @@
 // sequelizerc
 
-const = require('path')
+const path = require('path')
 
 module.exports = {
     config: path.resolve('src/config', 'database.json'),
