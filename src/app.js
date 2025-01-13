@@ -3,6 +3,9 @@ const cors = require('cors');
 require('dotenv').config();
 const routes = require('./routes');
 const envConfig = require('./config/env');
+const {initConnection} = require("./sutando/sutando");
+
+initConnection();
 
 
 const app = express();
