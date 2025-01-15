@@ -29,6 +29,7 @@ initConnection();
 const db = sutando.connection()
 const Schema = db.schema
 
+
 module.exports = {
     sutando,
     db,
