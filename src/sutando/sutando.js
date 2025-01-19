@@ -9,8 +9,8 @@ const initConnection = () => {
     sutando.addConnection({
         client: 'sqlite3',
         connection: {
-            filename: dbConfig.storage,
-            database: process.env.NODE_ENV === "test" ? ":memory:" : dbConfig.storage
+            filename: process.env.NODE_ENV === "test" ? ":memory:" : dbConfig.storage,
+            // database: process.env.NODE_ENV === "test" ? ":memory:" : dbConfig.storage
         },
         useNullAsDefault: true,
     })
