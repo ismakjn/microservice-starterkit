@@ -6,7 +6,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "test": "cross-env NODE_ENV=test jest",
-    "migrate": "node src/sutando/migrations/index.js",
+    "migrate": "node src/sutando/migrate.js",
     "seed": "node src/sutando/seeders/index.js"
   },
   "author": "",
