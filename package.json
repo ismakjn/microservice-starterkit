@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "migrate": "node src/sutando/migrate.js",
+    "seed": "node src/sutando/seeders/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^9.4.0",
+    "@jest/types": "^29.6.3",
     "cross-env": "^7.0.3",
     "jest": "^29.7.0",
     "nock": "^13.5.6",

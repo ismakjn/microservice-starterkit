@@ -9,6 +9,6 @@ COPY ./yarn.lock ./
 
 RUN yarn install
 
-COPY . .
+COPY ./src ./src
 
 EXPOSE 3000
